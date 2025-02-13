@@ -19,7 +19,9 @@ export default function HomeView (){
             </div>
             <div className={styles.contactButton}>
             <div>
-            <Link to="./recipesView" className={styles.buttonText}>Discover new Recipes</Link>
+            <Link to="./recipesView" className={styles.buttonText} style={{ textDecoration: "none" }}>
+                Discover new Recipes
+            </Link>
             </div>
 
             </div>

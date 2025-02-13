@@ -1,0 +1,121 @@
+
+
+.contactContainer {
+    margin: 50px auto;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+    background: linear-gradient(117deg, #193133 -44.25%, #27EAA6 99.44%), #E0E0E0;
+    margin-top: -2px;
+  }
+  
+  .heading {
+    font-size: 28px;
+    text-align: left;
+    margin-bottom: 15px;
+  }
+  
+  .subheading {
+    font-size: 24px;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  
+  .paragraph {
+    font-size: 18px;
+    text-align: left;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  
+  .section {
+    margin-bottom: 30px;
+  }
+  
+  .emailLink {
+    color: #27EAA6;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .emailLink:hover {
+    text-decoration: underline;
+  }
+  
+  .contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  .label {
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 5px;
+  }
+  
+  .input,
+  .textarea {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .textarea {
+    resize: vertical;
+  }
+  
+  
+  .submitButton:hover {
+    background-color: #e65a50;
+  }
+
+
+  
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .heading {
+      font-size: 24px;
+    }
+  
+    .subheading {
+      font-size: 20px;
+    }
+  
+    .paragraph {
+      font-size: 16px;
+    }
+  
+    .input,
+    .textarea {
+      font-size: 14px;
+    }
+  
+    .submitButton {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .heading {
+      font-size: 22px;
+    }
+  
+    .subheading {
+      font-size: 18px;
+    }
+  
+    .paragraph {
+      font-size: 14px;
+    }
+  }
