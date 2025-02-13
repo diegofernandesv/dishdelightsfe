@@ -32,7 +32,7 @@
     justify-content: right;
     width: 414px;
     height: 414px;
-    border-radius: 50px 0px;
+    border-radius: 24px 24px 24px 100px;
     overflow: hidden; /* Ensure the image respects the border radius */
     position: relative; /* Needed for pseudo-elements */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */

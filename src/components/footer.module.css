@@ -1,0 +1,130 @@
+/* Container for the footer */
+.footerContainer {
+    margin-top: 20px;
+    width: 100%; /* Full width */
+    min-height: 50vh; /* Adjust height as needed */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    box-sizing: border-box; /* Include padding in width/height calculations */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background: linear-gradient(90deg, #E9E4F0 0%, #FAF7FF 47.48%), #EDEDED;
+    border-radius: 20px;
+    padding:20px; /* Add padding for spacing */
+  }
+  
+  /* Content wrapper */
+  .footerContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text */
+    gap: 24px; /* Add gap for spacing */
+  }
+  
+  /* Logo container */
+  .footerLogoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* Logo image */
+  .footerLogo {
+    width: 150px; /* Adjust based on your logo size */
+    height: auto;
+  }
+  
+  /* Tagline text */
+  .footerTagline {
+    font-size: 16px;
+    font-family: 'Neue Montreal', sans-serif;
+    font-weight: 500;
+    color: black;
+    word-wrap: break-word;
+  }
+  
+  /* Section for social media links */
+  .footerSection {
+    margin-bottom: 20px;
+  }
+  
+  /* Subheading for social media links */
+  .footerSubheading {
+    font-size: 20px;
+    font-family: 'Neue Montreal', sans-serif;
+    font-weight: 800;
+    color: black;
+    word-wrap: break-word;
+  }
+  
+  /* Social media links container */
+  .footerSocialLinks {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /* Individual social media link */
+  .footerSocialLink {
+    color: black;
+    font-size: 16px;
+    font-family: 'Neue Montreal', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footerSocialLink:hover {
+    color: #27EAA6; /* Highlight color on hover */
+  }
+  
+  /* Copyright text */
+  .footerCopyright {
+    font-size: 14px;
+    font-family: 'Neue Montreal', sans-serif;
+    font-weight: 500;
+    color: black;
+    word-wrap: break-word;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footerContainer {
+      min-height: auto; /* Adjust height for smaller screens */
+      padding: 20px 16px; /* Reduce padding */
+    }
+  
+    .footerContent {
+      gap: 16px; /* Reduce gap for smaller screens */
+    }
+  
+    .footerLogo {
+      width: 120px; /* Adjust logo size */
+    }
+  
+    .footerTagline {
+      font-size: 14px; /* Reduce font size */
+    }
+  
+    .footerSubheading {
+      font-size: 18px; /* Reduce font size */
+    }
+  
+    .footerSocialLink {
+      font-size: 14px; /* Reduce font size */
+    }
+  
+    .footerCopyright {
+      font-size: 12px; /* Reduce font size */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .footerSocialLinks {
+      flex-direction: column; /* Stack links vertically */
+      gap: 10px; /* Reduce gap */
+    }
+  }
