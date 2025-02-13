@@ -13,6 +13,12 @@ export default function FavouritesView() {
         title: '',
         content: '',
         image: '', // Store the base64 image string
+        prepTime: '',
+        cookTime: '',
+        totalTime: '',
+        ingredients: '',
+        instructions: '',
+        tips: '',
     });
 
     const [isEditing, setIsEditing] = useState(false);
@@ -64,7 +70,17 @@ export default function FavouritesView() {
         } else {
             setArticles([...articles, { ...currentArticle, likes: 0, isLiked: false }]);
         }
-        setCurrentArticle({ title: '', content: '', image: '' }); // Reset the form
+        setCurrentArticle({
+            title: '',
+            content: '',
+            image: '',
+            prepTime: '',
+            cookTime: '',
+            totalTime: '',
+            ingredients: '',
+            instructions: '',
+            tips: '',
+        }); // Reset the form
     };
 
     const handleDelete = (index) => {
@@ -92,6 +108,13 @@ export default function FavouritesView() {
         setArticles(updatedArticles);
     };
 
+    const handleDeleteImage = () => {
+        setCurrentArticle((prevArticle) => ({
+            ...prevArticle,
+            image: '', // Clear the image
+        }));
+    };
+
     return (
         <div className={styles.container}>
             <h1>Create your Recipe Book🍽️✨</h1>
@@ -101,8 +124,9 @@ export default function FavouritesView() {
                     handleChange={handleChange}
                     handleSubmit={handleSubmit}
                     isEditing={isEditing}
+                    handleDeleteImage={handleDeleteImage}
                 />
-                <h2>Recipes</h2>
+                <h2>My Recipes</h2>
                 <FavouritesList
                     articles={articles}
                     handleEdit={handleEdit}

@@ -195,7 +195,7 @@ button[type="submit"]:hover {
 .form input[type="number"],
 .form textarea {
     width: 100%;
-    padding: 3px;
+    padding: 5px;
     border-radius: 10px;
     border: 1px solid #ccc;
     font-family: 'Neue Montreal', sans-serif;
@@ -212,38 +212,39 @@ button[type="submit"]:hover {
     outline: none;
 }
 
-/* File upload container */
+/* File Upload Container */
 .fileUploadContainer {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    align-items: center;
 }
 
-/* File upload label */
+/* File Upload Label (Custom Button) */
 .fileUploadLabel {
-    display: inline-block;
+    width: 100%;
     padding: 10px;
-    background: #141414;
-    color: white;
+    background: #27EAA6;
+    color: rgb(0, 0, 0);
     font-family: 'Neue Montreal', sans-serif;
     font-size: 16px;
     font-weight: 500;
     border-radius: 10px;
+    border: none;
     cursor: pointer;
-    text-align: center;
     transition: background 0.3s ease;
 }
 
 .fileUploadLabel:hover {
-    background: #333;
+    background: #1fb881;
 }
 
-/* Hide the default file input */
-.fileUploadLabel input[type="file"] {
+/* Hide the Default File Input */
+.fileInput {
     display: none;
 }
 
-/* Image preview container */
+/* Image Preview Container */
 .imagePreviewContainer {
     display: flex;
     flex-direction: column;
@@ -251,13 +252,65 @@ button[type="submit"]:hover {
     gap: 10px;
 }
 
-/* Image preview */
+/* Image Preview */
 .imagePreview {
     width: 100%;
     max-width: 200px;
     height: auto;
     border-radius: 10px;
     overflow: hidden;
+}
+
+.deletePreviewButton {
+    padding: 5px 10px;
+    background: #FF4D4D;
+    color: white;
+    font-family: 'Neue Montreal', sans-serif;
+    font-size: 14px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.deletePreviewButton:hover {
+    background: #e53935;
+}
+
+/* Delete Image Button */
+.deleteImageButton {
+    padding: 5px 10px;
+    background: #FF4D4D;
+    color: white;
+    font-family: 'Neue Montreal', sans-serif;
+    font-size: 14px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.deleteImageButton:hover {
+    background: #e53935;
+}
+
+/* Submit Button */
+.submitButton {
+    width: 100%;
+    padding: 10px;
+    background: #141414;
+    color: white;
+    font-family: 'Neue Montreal', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submitButton:hover {
+    background: #333;
 }
 
 /* Delete image button */
@@ -282,7 +335,7 @@ button[type="submit"]:hover {
     width: 100%;
     padding: 10px;
     background: #27EAA6;
-    color: white;
+    color: rgb(0, 0, 0);
     font-family: 'Neue Montreal', sans-serif;
     font-size: 16px;
     font-weight: 500;
@@ -296,63 +349,7 @@ button[type="submit"]:hover {
     background: #1fb881;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .container {
-        padding: 10px;
-    }
 
-    h1, h2 {
-        font-size: 26px;
-    }
-
-    .formContainer, .listContainer {
-        width: 100%;
-        padding: 0 16px;
-    }
-
-    .articleItem {
-        padding: 16px;
-    }
-
-    .articleTitle {
-        font-size: 18px;
-    }
-
-    .articleContent {
-        font-size: 14px;
-    }
-
-    .actionButtons {
-        flex-direction: column;
-        gap: 8px;
-    }
-    .form {
-        padding: 16px;
-    }
-
-    .form label {
-        font-size: 14px;
-    }
-
-    .form input[type="text"],
-    .form input[type="number"],
-    .form textarea {
-        font-size: 14px;
-    }
-
-    .fileUploadLabel {
-        font-size: 14px;
-    }
-
-    .deleteImageButton {
-        font-size: 12px;
-    }
-
-    .form button[type="submit"] {
-        font-size: 14px;
-    }
-}
 
 /* Container for the list */
 .favouritesList {
@@ -378,34 +375,39 @@ button[type="submit"]:hover {
 
 /* Article title */
 .articleTitle {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 48px;
+    margin-bottom: 0.5rem;
     color: #333;
+    text-align: left;
 }
 
 /* Article image */
 .articleImage {
     max-width: 100%;
-    border-radius: 8px;
-    margin-bottom: 1rem;
+    border-radius: 20px;
+    margin-bottom: 0.5rem;
 }
 
 /* Time details */
 .timeDetails {
-    font-size: 0.9rem;
+    font-size: 18px;
     color: #666;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 /* Ingredients and instructions */
 .ingredients, .instructions, .tips {
-    font-size: 1rem;
+    font-size: 20px;
     color: #444;
     margin-bottom: 1rem;
+    text-align: left;
 }
+
+
 
 .ingredients strong, .instructions strong, .tips strong {
     color: #333;
+    text-align: left;
 }
 
 /* Likes section */
@@ -459,4 +461,69 @@ button[type="submit"]:hover {
 
 .deleteButton:hover {
     background-color: #e53935;
+}
+
+.article.instructions .article.ingredients .article.tips {
+    text-align: left;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 28px;
+    }
+
+    h1, h2 {
+        font-size: 25px;
+    }
+
+    .formContainer, .listContainer {
+        width: 100%;
+        padding: 0 14px;
+    }
+
+    .articleItem {
+        padding: 16px;
+    }
+
+    .articleTitle {
+        font-size: 18px;
+    }
+
+    .articleContent {
+        font-size: 14px;
+    }
+
+    .actionButtons {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .form {
+        padding: 16px;
+    }
+
+    .form label {
+        font-size: 14px;
+    }
+
+    .form input[type="text"],
+    .form input[type="number"],
+    .form textarea {
+        font-size: 14px;
+    }
+
+    .fileUploadLabel {
+        font-size: 14px;
+        padding: 10px 2px;
+    }
+
+    .deleteImageButton {
+        font-size: 12px;
+    }
+
+    .form button[type="submit"] {
+        font-size: 14px;
+    }
+
 }
