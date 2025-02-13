@@ -95,14 +95,12 @@
       position: absolute; /* Position the navbar absolutely */
       top: 100%; /* Position it below the header */
       left: 0;
-      background: #D3CCE3; /* Match the header background */
-      background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3); /* Gradient background */
-      background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* Gradient background */
+      background: linear-gradient(90deg, #E9E4F0 0%, #FAF7FF 47.48%), #EDEDED;
       border-radius: 0 0 12px 12px; /* Rounded corners at the bottom */
       z-index: 1000; /* Ensure it appears above other content */
       height: 48vh; /* Auto height to fit content */
       overflow-y: auto; /* Add scroll if content overflows */
-      border-radius: 10px;
+      border-radius: 20px;
     }
   
     .navbar.active {
@@ -125,7 +123,7 @@
     .navbar .link {
       display: block; /* Make links block-level for full width */
       padding: 8px 0; /* Reduce padding for closer spacing */
-      font-size: 20px; /* Slightly reduce font size for better fit */
+      
     }
   
     .burgerMenu {

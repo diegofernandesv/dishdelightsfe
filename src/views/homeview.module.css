@@ -1,0 +1,158 @@
+/* Container for the hero section */
+.container {
+    width: 100%; /* Full width */
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: left; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    box-sizing: border-box; /* Include padding in width/height calculations */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background: linear-gradient(117deg, #193133 -44.25%, #27EAA6 99.44%), #E0E0E0;
+    border-radius: 20px;
+}
+
+/* Content wrapper */
+.content {
+    margin-top: -100px;
+    margin-left: 120px;
+    max-width: 750px; /* Limit content width */
+    width: 100%; /* Full width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    gap: 24px; /* Reduced gap for better spacing */
+    text-align: center; /* Center text */
+}
+
+.imageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 414px;
+    height: 414px;
+    border-radius: 50px 0px;
+    overflow: hidden; /* Ensure the image respects the border radius */
+    position: relative; /* Needed for pseudo-elements */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+.imageContainer:hover {
+    border: 4px solid #27EAA6;
+}
+
+/* Greeting text */
+.greeting {
+    font-size: 20px;
+    font-family: 'Neue Montreal', sans-serif; /* Updated font */
+    font-weight: 500;
+    word-wrap: break-word;
+    color: white;
+}
+
+/* Headline text */
+.headline {
+    color: white;
+    font-size: 40px;
+    font-family: 'Neue Montreal', sans-serif; /* Updated font */
+    font-weight: 800;
+    word-wrap: break-word;
+    line-height: 1.2; /* Improve readability */
+}
+
+/* Description text */
+.description {
+    color: white;
+    font-size: 20px;
+    font-family: 'Neue Montreal', sans-serif; /* Updated font */
+    font-weight: 500;
+    word-wrap: break-word;
+    line-height: 1.5; /* Improve readability */
+}
+
+/* Contact button */
+.contactButton {
+    width: 261px;
+    padding: 10px;
+    background: #141414;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer; /* Add pointer cursor */
+    transition: background 0.3s ease; /* Smooth hover effect */
+}
+
+.contactButton:hover {
+    background: #333; /* Darker background on hover */
+}
+
+/* Button text */
+.buttonText {
+    color: white;
+    font-size: 16px;
+    font-family: 'Neue Montreal', sans-serif; /* Updated font */
+    font-weight: 500;
+    word-wrap: break-word;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        min-height: 100vh; /* Full height for perfect centering */
+        padding: 10px 16px;
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+
+    .content {
+        margin-top: 0; /* Reset margin */
+        margin-left: 0; /* Reset margin */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 24px; /* Consistent gap */
+        text-align: center; /* Ensures text stays centered */
+        width: 100%; /* Ensure content doesn't overflow */
+        max-width: 100%; /* Ensure content doesn't overflow */
+        padding: 0 16px; /* Add padding to prevent edge overflow */
+    }
+
+    .greeting {
+        font-size: 14px;
+    }
+
+    .headline {
+        font-size: 26px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .contactButton {
+        width: 100%;
+        max-width: 261px;
+        display: flex; /* Ensures proper centering */
+        justify-content: center; /* Center button content */
+        margin: 0 auto; /* Centers the button */
+    }
+
+    .imageContainer {
+        width: 100%; /* Make image container responsive */
+        max-width: 300px; /* Limit maximum width */
+        height: auto; /* Allow height to adjust */
+        aspect-ratio: 1 / 1; /* Maintain square aspect ratio */
+        overflow: hidden;
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+}
