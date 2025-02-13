@@ -8,8 +8,15 @@ import saladImage from '../assets/salad.png';
 import tacoImage from '../assets/taco.png';
 import dimsumImage from '../assets/dimsum.png';
 import bacalhauImage from '../assets/bacalhau.png';
+import { useEffect } from "react";
+
 
 export default function DetailPage() {
+    
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+    
     const recipes = [
         {
             uid: "1",
