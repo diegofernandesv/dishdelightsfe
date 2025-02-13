@@ -1,4 +1,8 @@
-/* Container for the recipes view */
+body {
+    font-family: 'Neue Montreal', sans-serif;;
+}
+
+
 .recipesContainer {
     width: 100%;
     min-height: 100vh;
@@ -9,105 +13,168 @@
     overflow-x: hidden;
 }
 
-/* Heading */
 .recipesContainer h1 {
     color: white;
     font-size: 40px;
-    font-family: 'Neue Montreal', sans-serif;
     font-weight: 800;
     text-align: center;
     margin-bottom: 20px;
 }
 
-/* Search and filter container */
 .filters {
     display: flex;
-    flex-direction: column;
-    gap: 16px;
-    margin-bottom: 24px;
-    margin-left: 120px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 40px;
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
 }
 
 .filters label {
     color: white;
-    font-size: 16px;
-    font-family: 'Neue Montreal', sans-serif;
+    font-size: 14px;
     font-weight: 500;
+    margin-bottom: 8px;
+    display: block;
 }
 
-.filters input,
-.filters select {
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    font-family: 'Neue Montreal', sans-serif;
-    font-size: 14px;
-    background: #fff;
-    color: #141414;
-    width: 100%;
+.filters > div {
+    flex: 1;
     max-width: 300px;
 }
 
-/* Recipe list */
+.filters input {
+    width: 100%;
+    padding: 12px 8px;
+    border-radius: 12px;
+    border: 2px solid white;
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.filters input::placeholder {
+    color: white;
+}
+
+.filters input:focus {
+    border-color: white;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.filters select {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 12px;
+    border: 2px solid white;
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    outline: none;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+}
+
+.filters select:focus {
+    border-color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.filters select option {
+    background: #193133;
+    color: white;
+    padding: 12px;
+}
+
 .recipeList {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 24px;
     justify-content: center;
-    
+    padding: 20px;
 }
 
-/* Recipe card */
 .recipeCard {
-    background: #fff;
-    border-radius: 20px;
-    overflow: hidden;
-    width: 200px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    padding: 16px;
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .recipeCard:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
 }
 
 .recipeCard img {
     width: 100%;
-    height: 200px;
+    height: 240px;
     object-fit: cover;
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+}
+
+.recipeCard:hover img {
+    transform: scale(1.05);
 }
 
 .recipeCard div {
-    padding: 10px;
     font-size: 16px;
-    font-family: 'Neue Montreal', sans-serif;
     font-weight: 500;
-    color: #141414;
+    color:black;
+    text-align: left;
+    padding: 8px 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 700;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+
+    .recipesContainer h1{
+        font-size: 28px;
+    }
     .filters {
-        align-items: center;
-        margin-left: 16px;
+        flex-direction: column;
+        padding: 16px;
+        margin: 0 16px 32px 16px;
     }
 
+    .filters > div {
+        max-width: 100%;
+    }
+    
     .filters input,
     .filters select {
         max-width: 90%;
     }
-
+    
     .recipeCard {
-        width: 150px;
+        width: 400px;
     }
-
+    
     .recipeCard img {
-        height: 120px;
-    }
-
-    .recipeCard div {
-        font-size: 14px;
+        height: 180px;
     }
 }

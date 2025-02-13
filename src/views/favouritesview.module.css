@@ -1,0 +1,462 @@
+/* Container for the FavouritesView */
+.container {
+    width: 100%; /* Full width */
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    box-sizing: border-box; /* Include padding in width/height calculations */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background: linear-gradient(117deg, #193133 -44.25%, #27EAA6 99.44%), #E0E0E0;
+    border-radius: 20px;
+    padding: 20px; /* Add padding for better spacing */
+}
+
+/* Content wrapper */
+.content {
+    max-width: 750px; /* Limit content width */
+    width: 100%; /* Full width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    gap: 24px; /* Reduced gap for better spacing */
+    text-align: center; /* Center text */
+}
+
+/* Heading text */
+h1, h2 {
+    color: white;
+    font-size: 40px;
+    font-family: 'Neue Montreal', sans-serif; /* Updated font */
+    font-weight: 800;
+    word-wrap: break-word;
+    line-height: 1.2; /* Improve readability */
+}
+
+/* Form container */
+.formContainer {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Input fields */
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-family: 'Neue Montreal', sans-serif;
+    font-size: 16px;
+    color: #141414;
+    background: white;
+}
+
+/* File input */
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-family: 'Neue Montreal', sans-serif;
+    font-size: 16px;
+    color: #141414;
+    background: white;
+}
+
+/* Submit button */
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background: #141414;
+    border-radius: 20px;
+    color: white;
+    font-size: 16px;
+    font-family: 'Neue Montreal', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background: #333; /* Darker background on hover */
+}
+
+/* List container */
+.listContainer {
+    width: 100%;
+    max-width: 750px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Article item */
+.articleItem {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+
+/* Article image */
+.articleImage {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Article title */
+.articleTitle {
+    color: #141414;
+    font-size: 20px;
+    font-family: 'Neue Montreal', sans-serif;
+    font-weight: 800;
+    word-wrap: break-word;
+}
+
+/* Article content */
+.articleContent {
+    color: #141414;
+    font-size: 16px;
+    font-family: 'Neue Montreal', sans-serif;
+    font-weight: 500;
+    word-wrap: break-word;
+}
+
+/* Action buttons */
+.actionButtons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+/* Edit and Delete buttons */
+.editButton, .deleteButton, .likeButton {
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-family: 'Neue Montreal', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.editButton {
+    background: #27EAA6;
+    color: white;
+}
+
+.deleteButton {
+    background: #FF4D4D;
+    color: white;
+}
+
+.likeButton {
+    background: #141414;
+    color: white;
+}
+
+.editButton:hover, .deleteButton:hover, .likeButton:hover {
+    opacity: 0.8;
+}
+
+/* Form container */
+.form {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form labels */
+.form label {
+    color: #141414;
+    font-size: 16px;
+    font-family: 'Neue Montreal', sans-serif;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+/* Input fields */
+.form input[type="text"],
+.form input[type="number"],
+.form textarea {
+    width: 100%;
+    padding: 3px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-family: 'Neue Montreal', sans-serif;
+    font-size: 16px;
+    color: #141414;
+    background: white;
+    transition: border-color 0.3s ease;
+}
+
+.form input[type="text"]:focus,
+.form input[type="number"]:focus,
+.form textarea:focus {
+    border-color: #27EAA6;
+    outline: none;
+}
+
+/* File upload container */
+.fileUploadContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* File upload label */
+.fileUploadLabel {
+    display: inline-block;
+    padding: 10px;
+    background: #141414;
+    color: white;
+    font-family: 'Neue Montreal', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.fileUploadLabel:hover {
+    background: #333;
+}
+
+/* Hide the default file input */
+.fileUploadLabel input[type="file"] {
+    display: none;
+}
+
+/* Image preview container */
+.imagePreviewContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Image preview */
+.imagePreview {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Delete image button */
+.deleteImageButton {
+    padding: 5px 10px;
+    background: #FF4D4D;
+    color: white;
+    font-family: 'Neue Montreal', sans-serif;
+    font-size: 14px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.deleteImageButton:hover {
+    background: #cc0000;
+}
+
+/* Submit button */
+.form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background: #27EAA6;
+    color: white;
+    font-family: 'Neue Montreal', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.form button[type="submit"]:hover {
+    background: #1fb881;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1, h2 {
+        font-size: 26px;
+    }
+
+    .formContainer, .listContainer {
+        width: 100%;
+        padding: 0 16px;
+    }
+
+    .articleItem {
+        padding: 16px;
+    }
+
+    .articleTitle {
+        font-size: 18px;
+    }
+
+    .articleContent {
+        font-size: 14px;
+    }
+
+    .actionButtons {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .form {
+        padding: 16px;
+    }
+
+    .form label {
+        font-size: 14px;
+    }
+
+    .form input[type="text"],
+    .form input[type="number"],
+    .form textarea {
+        font-size: 14px;
+    }
+
+    .fileUploadLabel {
+        font-size: 14px;
+    }
+
+    .deleteImageButton {
+        font-size: 12px;
+    }
+
+    .form button[type="submit"] {
+        font-size: 14px;
+    }
+}
+
+/* Container for the list */
+.favouritesList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Individual article item */
+.articleItem {
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.articleItem:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Article title */
+.articleTitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* Article image */
+.articleImage {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Time details */
+.timeDetails {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+/* Ingredients and instructions */
+.ingredients, .instructions, .tips {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+.ingredients strong, .instructions strong, .tips strong {
+    color: #333;
+}
+
+/* Likes section */
+.likes {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+/* Action buttons container */
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Heart icon */
+.heartIcon {
+    cursor: pointer;
+    font-size: 24px;
+    transition: color 0.2s ease;
+}
+
+.heartIcon:hover {
+    color: #ff4d4d;
+}
+
+/* Edit and Delete buttons */
+.editButton, .deleteButton {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.editButton {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.editButton:hover {
+    background-color: #45a049;
+}
+
+.deleteButton {
+    background-color: #f44336;
+    color: white;
+}
+
+.deleteButton:hover {
+    background-color: #e53935;
+}
