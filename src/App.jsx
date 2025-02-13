@@ -5,6 +5,7 @@ import ContactView from "./views/ContactView";
 import FavouritesView from "./views/FavouritesView";
 import RecipesView from "./views/RecipesView";
 import AboutView from "./views/AboutView";
+import DetailPage from "./views/DetailPage";
 
 const router = createBrowserRouter([
   {
@@ -30,7 +31,12 @@ const router = createBrowserRouter([
       {
         path: "AboutView",
         element: <AboutView/>
+      },
+      {
+        path: "/dishdelightsfe/detailpage/:recipeId",
+        element: <DetailPage/>
       }
+      
     ]
   }
 ])
