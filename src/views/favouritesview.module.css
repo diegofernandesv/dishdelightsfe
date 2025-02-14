@@ -349,8 +349,6 @@ button[type="submit"]:hover {
     background: #1fb881;
 }
 
-
-
 /* Container for the list */
 .favouritesList {
     list-style: none;
@@ -358,7 +356,7 @@ button[type="submit"]:hover {
     margin: 0;
 }
 
-/* Individual article item */
+/* Individual article item (continued) */
 .articleItem {
     background-color: #f9f9f9;
     border-radius: 12px;
@@ -402,8 +400,6 @@ button[type="submit"]:hover {
     margin-bottom: 1rem;
     text-align: left;
 }
-
-
 
 .ingredients strong, .instructions strong, .tips strong {
     color: #333;
@@ -463,11 +459,6 @@ button[type="submit"]:hover {
     background-color: #e53935;
 }
 
-.article.instructions .article.ingredients .article.tips {
-    text-align: left;
-}
-
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
@@ -525,5 +516,4 @@ button[type="submit"]:hover {
     .form button[type="submit"] {
         font-size: 14px;
     }
-
 }

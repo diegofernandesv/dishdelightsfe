@@ -1,8 +1,9 @@
+/* Global Styles */
 body {
-    font-family: 'Neue Montreal', sans-serif;;
+    font-family: 'Neue Montreal', sans-serif;
 }
 
-
+/* Recipes Container */
 .recipesContainer {
     width: 100%;
     min-height: 100vh;
@@ -13,6 +14,7 @@ body {
     overflow-x: hidden;
 }
 
+/* Recipes Header */
 .recipesContainer h1 {
     color: white;
     font-size: 40px;
@@ -21,6 +23,7 @@ body {
     margin-bottom: 20px;
 }
 
+/* Filters Section */
 .filters {
     display: flex;
     flex-direction: row;
@@ -98,6 +101,7 @@ body {
     padding: 12px;
 }
 
+/* Recipe List */
 .recipeList {
     display: flex;
     flex-wrap: wrap;
@@ -106,6 +110,7 @@ body {
     padding: 20px;
 }
 
+/* Recipe Card */
 .recipeCard {
     width: 280px;
     padding: 16px;
@@ -151,10 +156,10 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-
-    .recipesContainer h1{
+    .recipesContainer h1 {
         font-size: 28px;
     }
+    
     .filters {
         flex-direction: column;
         padding: 16px;

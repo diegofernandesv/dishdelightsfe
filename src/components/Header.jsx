@@ -36,7 +36,7 @@ export default function Header() {
           <li><Link to="./recipesView" style={{ color: '#004D43', textDecoration: 'none', fontSize: '18px' }}
           className="link">Recipes</Link></li>
           <li><Link to="./favouritesView" style={{ color: '#004D43', textDecoration: 'none', fontSize: '18px' }}
-          className="link">Favourites</Link></li>
+          className="link">Favorites</Link></li>
           <li><Link to="./aboutView" style={{ color: '#004D43', textDecoration: 'none', fontSize: '18px' }}
            className="link">About</Link></li>
           <li><Link to="./contactView" style={{ color: '#004D43', textDecoration: 'none', fontSize: '18px' }}
